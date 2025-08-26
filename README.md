@@ -8,23 +8,23 @@ This project demonstrates how to build and run a React app with an API server fo
 ## Project Structure
 file-sharing-app/
 │
-├── client/ # React frontend
-│ ├── public/ # Static files
-│ ├── src/ # React components
-│ ├── package.json # React app dependencies & scripts
+│ ├── public/
+│ ├── src/
+│ ├── package.json
 │ └── ...
 │
-├── db.json # JSON database for mock API
-├── package.json # json-server config & scripts
-└── README.md # Project documentation
+├── db.json
+├── .env
+├── package.json
+└── README.md
 
 ---
 
-## ⚙️ Installation & Setup
+## How to Install and Setup?
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/heyamish/file-sharing.git
-cd file-sharing
+git clone https://github.com/heyamish/file-sharing-app.git
+cd file-sharing-app
 
 ### 2️⃣ Install root dependencies (API server)
 npm install
@@ -41,48 +41,29 @@ npm start
 To make API calls from React → json-server, add a proxy to your React app’s package.json:
 
 client/package.json
-
-"proxy": "http://localhost:3001"
-
-
+"proxy": "http://localhost:3000"
 Now, requests like:
-
 fetch("/files")
-
-
 will automatically go to:
+http://localhost:3000/files
 
-http://localhost:3001/files
+---
 
- ## Available Scripts
-In Root (/file-sharing)
-
-npm start → runs json-server (db.json) on port 3001
+## Available Scripts
+In Root (/file-sharing-app)
+npm start → runs json-server (db.json) on port 3000
 
 In Client (/client)
-
 npm start → runs React app on port 3000
-
 npm run build → builds the app for production
-
 npm test → runs tests
 
-## 📊 Example db.json
-{
-  "files": [
-    { "id": 1, "name": "document.pdf", "size": "2MB" },
-    { "id": 2, "name": "image.png", "size": "1.5MB" }
-  ]
-}
-
+---
 
 ## API Endpoints (via json-server):
 
-GET /files
-
-POST /files
-
-PUT /files/:id
-
-DELETE /files/:id
+ -GET /files
+ -POST /files
+ -PUT /files/:id
+ -DELETE /files/:id
 

@@ -23,7 +23,7 @@ file-sharing-app/
 ## How to Install and Setup?
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/heyamish/file-sharing-app.git
+git clone https://github.com/username/file-sharing-app.git
 cd file-sharing-app
 
 ### 2️⃣ Install root dependencies (API server)
